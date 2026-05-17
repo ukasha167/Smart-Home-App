@@ -1,3 +1,4 @@
+package src;
 public class LightBulb extends SmartDevice {
     private int brigtness;
     private String color;

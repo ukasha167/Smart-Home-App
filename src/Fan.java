@@ -1,5 +1,5 @@
+package src;
 public class Fan extends SmartDevice {
-
     private int speed;
 
     public Fan(String name, int speed) {

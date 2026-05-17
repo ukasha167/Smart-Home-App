@@ -1,3 +1,5 @@
+package src;
+
 import java.io.*;
 
 public abstract class SmartDevice implements Serializable {

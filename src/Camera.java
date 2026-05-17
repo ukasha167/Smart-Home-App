@@ -1,3 +1,4 @@
+package src;
 public class Camera extends SmartDevice {
     private String resolution;
     private String format;

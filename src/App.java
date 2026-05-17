@@ -1,3 +1,4 @@
+package src;
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
@@ -22,7 +23,7 @@ public class App {
     private int startY;
 
     App() {
-        backgroundImage = new ImageIcon("background.jpg").getImage();
+        backgroundImage = new ImageIcon("imgs/background.jpg").getImage();
         outerFrame = new JFrame();
         buttons = new JButton[5];
         initializeGUI();
@@ -348,7 +349,7 @@ public class App {
     private void saveToFile() {
         try (ObjectOutputStream write = new ObjectOutputStream(new FileOutputStream("Devices.ser"))) {
             write.writeObject(addedDevices);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -357,7 +358,7 @@ public class App {
     private void loadFromFile() {
         try (ObjectInputStream read = new ObjectInputStream(new FileInputStream("Devices.ser"))) {
             addedDevices = (ArrayList<SmartDevice>) read.readObject();
-        } catch (IOException | ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

@@ -1,3 +1,4 @@
+package src;
 public class Thermostat extends SmartDevice {
     private double temperature;
 
